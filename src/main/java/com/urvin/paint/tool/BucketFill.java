@@ -13,6 +13,18 @@ public class BucketFill {
         this.color = color;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public char getColor() {
+        return color;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

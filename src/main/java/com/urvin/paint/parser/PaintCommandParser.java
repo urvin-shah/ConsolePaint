@@ -1,6 +1,6 @@
 package com.urvin.paint.parser;
 
-import com.urvin.paint.command.CreateCanvasCommand;
+import com.urvin.paint.command.CreateCanvas;
 import com.urvin.paint.command.IPaintCommand;
 
 import java.util.HashMap;
@@ -14,6 +14,6 @@ public class PaintCommandParser {
     }
 
     public void init() {
-        this.paintPatternCommands.put ( PaintCommandPatterEnum.CANVAS, new CreateCanvasCommand(int w,int h) );
+        //this.paintPatternCommands.put ( PaintCommandPatterEnum.CANVAS, new CreateCanvas (int w,int h) );
     }
 }
