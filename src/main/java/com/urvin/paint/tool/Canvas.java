@@ -29,17 +29,4 @@ public class Canvas {
         return height;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Canvas)) return false;
-        Canvas canvas = (Canvas) o;
-        return width == canvas.width &&
-                height == canvas.height;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash ( width, height );
-    }
 }

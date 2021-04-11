@@ -42,20 +42,4 @@ public class Rectangle {
     public int getY2() {
         return y2;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Rectangle)) return false;
-        Rectangle rectangle = (Rectangle) o;
-        return x1 == rectangle.x1 &&
-                y1 == rectangle.y1 &&
-                x2 == rectangle.x2 &&
-                y2 == rectangle.y2;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash ( x1, y1, x2, y2 );
-    }
 }

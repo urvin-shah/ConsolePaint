@@ -36,18 +36,4 @@ public class BucketFill {
         return color;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof BucketFill)) return false;
-        BucketFill that = (BucketFill) o;
-        return x == that.x &&
-                y == that.y &&
-                color == that.color;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash ( x, y, color );
-    }
 }
