@@ -1,5 +1,7 @@
 package com.urvin.paint.tool;
 
+import com.urvin.paint.util.ConsoleUtil;
+
 import java.util.Objects;
 
 public class Line {
@@ -13,6 +15,16 @@ public class Line {
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
+    }
+
+    public Line(String input) {
+        String[] params = input.split ( " " );
+        if(params != null) {
+            this.x1 = ConsoleUtil.getInt ( params[0] );
+            this.y1 = ConsoleUtil.getInt ( params[1] );
+            this.x2 = ConsoleUtil.getInt ( params[2] );
+            this.y2 = ConsoleUtil.getInt ( params[3] );
+        }
     }
 
     @Override

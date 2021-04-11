@@ -1,6 +1,7 @@
 package com.urvin.paint.command;
 
 import com.urvin.paint.constant.DrawingSymbol;
+import com.urvin.paint.exception.CommandException;
 import com.urvin.paint.receiver.PaintScreen;
 import com.urvin.paint.tool.Rectangle;
 
@@ -12,6 +13,11 @@ public class DrawRectangle implements IPaintCommand {
     @Override
     public void execute() {
         PaintScreen paintScreen = PaintScreen.getInstance ();
-        paintScreen.drawRectangle ( rectangle, DrawingSymbol.RECTANGLE.getDrawingSymbol (), DrawingSymbol.CANVAS_VERTICAL_SYMBOL.getDrawingSymbol () );
+        try {
+            paintScreen.drawRectangle ( rectangle, DrawingSymbol.RECTANGLE.getDrawingSymbol (), DrawingSymbol.RECTANGLE.getDrawingSymbol () );
+            paintScreen.drawScreen ();
+        }catch (CommandException.InvalidCommandParamsException ive) {
+            ive.printMessage ();
+        }
     }
 }

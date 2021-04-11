@@ -6,7 +6,8 @@ public enum DrawingSymbol {
     CANVAS_VERTICAL_SYMBOL ('|'),
     RECTANGLE ('x'),
     LINE('x'),
-    BUCKET_FILL('*');
+    BUCKET_FILL('*'),
+    EMPTY(' ');
 
     private char drawingSymbol;
 
