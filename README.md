@@ -42,7 +42,8 @@ Below maven dependency used:
 - System-Lambda (Used to read the output text of System.out.println for printGameBoard())
 - Surefire to run the JUnit testcases.
 ## Setup
-To run the project locally using maven
+To run the project locally using maven:
+
 ###Prerequisites
 * Maven
 * JDK 8
