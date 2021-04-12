@@ -14,6 +14,9 @@ import com.urvin.paint.util.ConsoleUtil;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This class helps to parse te command text.
+ */
 public class PaintCommandParser {
     private static PaintCommandParser paintCommandParser;
     private static Map<CommandInitialEnum, PaintCommandPattern> paintPatternCommands;
@@ -30,6 +33,9 @@ public class PaintCommandParser {
         return paintCommandParser;
     }
 
+    /**
+     * init() method initialize the Console Paint commands with the patterns.
+     */
     public void init() {
         this.paintPatternCommands.put ( CommandInitialEnum.C,new PaintCommandPattern ( PaintCommandPatternEnum.CANVAS ) );
         this.paintPatternCommands.put ( CommandInitialEnum.L,new PaintCommandPattern ( PaintCommandPatternEnum.LINE ) );
@@ -38,6 +44,14 @@ public class PaintCommandParser {
         this.paintPatternCommands.put ( CommandInitialEnum.Q,new PaintCommandPattern ( PaintCommandPatternEnum.QUIT ) );
     }
 
+    /**
+     * parseCommand method helps to parse the inputCommand and return the respective Command object.
+     * If the inputCommand text is not supported by the application then it throws the respective UnsupportedCommandException.
+     * If the inputCommand text is not in appropriate format then it throws the respective UnsupportedCommandFormatExecption.
+     * @param inputCommand
+     * @return
+     * @throws BaseException
+     */
     public IPaintCommand parseCommand(String inputCommand) throws BaseException{
         IPaintCommand paintCommand = null;
 

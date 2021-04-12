@@ -11,6 +11,12 @@ public class DrawLine implements IPaintCommand{
     public DrawLine(Line line) {
         this.line = line;
     }
+
+    /**
+     * This command will draw a line inside the Canvas.
+     * It will validate whether co-ordinates of line are inside the canvas or not.
+     * If appropriate then it draws a line in the canvas with the given color-char else it gives error message.
+     */
     @Override
     public void execute() {
         PaintScreen paintScreen = PaintScreen.getInstance (  );

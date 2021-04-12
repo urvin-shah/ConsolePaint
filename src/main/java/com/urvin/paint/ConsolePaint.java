@@ -11,10 +11,18 @@ public class ConsolePaint {
     PaintCommandParser paintCommandParser;
     ConsolePaintTool consolePaintTool;
 
+    /**
+     * ConsolePaint constructor initialize the PaintCommandParser and ConsolePAintTool.
+     */
     public ConsolePaint() {
         paintCommandParser = PaintCommandParser.getInstance ();
         consolePaintTool = new ConsolePaintTool ();
     }
+
+    /**
+     * startDrawing will draw the shape respective to the command.
+     * @param strCommand
+     */
     public void startDrawing(String strCommand) {
         IPaintCommand paintCommand=null;
         try {
@@ -23,6 +31,5 @@ public class ConsolePaint {
          }catch (BaseException e) {
              e.printMessage ();
          }
-        System.out.println ();
     }
 }

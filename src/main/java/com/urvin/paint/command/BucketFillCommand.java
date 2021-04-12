@@ -10,6 +10,12 @@ public class BucketFillCommand implements IPaintCommand{
     public BucketFillCommand(BucketFill bucketFill) {
         this.bucketFill = bucketFill;
     }
+
+    /**
+     * This command will fill the color with the given color-char in the command in the canvas.
+     * It will validate whether co-ordinate are inside the canvas or not.
+     * If appropriate then fill the canvas with the given color-char else it gives error message.
+     */
     @Override
     public void execute() {
         try {

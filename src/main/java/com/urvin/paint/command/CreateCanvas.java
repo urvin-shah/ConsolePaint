@@ -10,6 +10,11 @@ public class CreateCanvas implements IPaintCommand {
     public CreateCanvas(Canvas canvas) {
         this.canvas = canvas;
     }
+
+    /**
+     * This command will draw the canvas.
+     * It will create the canvas which can be used later on for drawing other shapes.     *
+     */
     @Override
     public void execute() {
         PaintScreen paintScreen = PaintScreen.getInstance(this.canvas) ;
