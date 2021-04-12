@@ -47,7 +47,7 @@ To run the project locally using maven
 * Maven
 * JDK 8
 
-####Please follow below steps to run the project through maven locally:
+###Please follow below steps to run the project through maven locally:
 
 1 Run below maven command from source directory to create jar file
 ```
