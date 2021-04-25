@@ -1,0 +1,5 @@
+com\urvin\paint\parser\PaintCommandPatternTest.class
+com\urvin\paint\parser\PaintCommandParserTest.class
+com\urvin\paint\util\ConsoleUtilTest.class
+com\urvin\paint\ConsolePaintTest.class
+com\urvin\paint\receiver\PaintScreenTest.class

@@ -10,7 +10,8 @@ public enum DrawingSymbol {
     CANVAS_VERTICAL_SYMBOL ('|'),
     RECTANGLE ('x'),
     LINE('x'),
-    EMPTY(' ');
+    EMPTY(' '),
+    NONE((char)31);
 
     private char drawingSymbol;
 

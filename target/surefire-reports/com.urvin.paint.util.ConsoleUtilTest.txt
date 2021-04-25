@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.urvin.paint.util.ConsoleUtilTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.urvin.paint.util.ConsoleUtilTest

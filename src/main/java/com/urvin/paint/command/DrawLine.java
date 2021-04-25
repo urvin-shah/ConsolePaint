@@ -23,6 +23,7 @@ public class DrawLine implements IPaintCommand{
         try {
             paintScreen.drawLine ( this.line, DrawingSymbol.LINE.getDrawingSymbol () );
             paintScreen.drawScreen ();
+            paintScreen.addLine ( line );
         }catch (CommandException.InvalidCommandParamsException ive) {
             ive.printMessage ();
         }

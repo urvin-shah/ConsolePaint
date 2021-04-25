@@ -21,7 +21,9 @@ public class DrawRectangle implements IPaintCommand {
         PaintScreen paintScreen = PaintScreen.getInstance ();
         try {
             paintScreen.drawRectangle ( rectangle, DrawingSymbol.RECTANGLE.getDrawingSymbol (), DrawingSymbol.RECTANGLE.getDrawingSymbol () );
+            paintScreen.fillRectangle ( rectangle );
             paintScreen.drawScreen ();
+            paintScreen.addRectangle ( rectangle );
         }catch (CommandException.InvalidCommandParamsException ive) {
             ive.printMessage ();
         }

@@ -1,6 +1,7 @@
 package com.urvin.paint;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class Application {
     public static void main(String[] args) {
@@ -24,5 +25,7 @@ public class Application {
             consolePaint.startDrawing (strCommand);
             System.out.println ();
         }
+
+        //IntStream.range ( 1,128 ).forEach ( n->System.out.println ("Value:"+n+" is :"+(char)n) );
     }
 }

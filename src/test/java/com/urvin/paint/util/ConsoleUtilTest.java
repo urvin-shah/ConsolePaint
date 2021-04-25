@@ -46,4 +46,19 @@ public class ConsoleUtilTest {
     void getCommandInitial_Failure() {
         assertEquals ( '0', ConsoleUtil.getCommandInitial ( null ) );
     }
+
+    @Test
+    void getMinSuccess() {
+        assertEquals ( 15,ConsoleUtil.getMin ( 15,16 ) );
+    }
+
+    @Test
+    void getMaxSuccess() {
+        assertEquals ( 16,ConsoleUtil.getMax ( 15,16 ) );
+    }
+
+    @Test
+    void distanceSuccess() {
+        assertEquals ( 2.0,ConsoleUtil.distance ( 1,2,3,2 ) );
+    }
 }

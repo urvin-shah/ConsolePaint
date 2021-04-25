@@ -1,6 +1,9 @@
 package com.urvin.paint.receiver;
 
 import com.urvin.paint.command.BucketFillCommand;
+import com.urvin.paint.command.CreateCanvas;
+import com.urvin.paint.command.DrawLine;
+import com.urvin.paint.command.DrawRectangle;
 import com.urvin.paint.constant.DrawingSymbol;
 import com.urvin.paint.exception.CommandException;
 import com.urvin.paint.tool.BucketFill;
@@ -104,5 +107,47 @@ class PaintScreenTest {
             paintScreen.drawRectangle ( rectangle,'x','x' );
         } );
         assertTrue ( exception instanceof CommandException.InvalidCommandParamsException );
+    }
+
+    @Test
+    void addLineSuccess(){
+        paintScreen.addLine ( new Line(1,2,6,2) );
+        assertEquals ( 1,paintScreen.getLines ().size () );
+    }
+
+    @Test
+    void addRectangleSuccess(){
+        paintScreen.addRectangle ( new Rectangle (14,1,18,3) );
+        assertEquals ( 1,paintScreen.getRectangles ().size () );
+    }
+
+    @Test
+    @DisplayName ( "Fill Color on the Line" )
+    void fillColorOnLineTestSuccess() throws CommandException.InvalidCommandParamsException {
+        Canvas canvas = new Canvas ( "20 4" );
+        Line line = new Line ( 1,2,6,2 );
+
+        paintScreen = PaintScreen.getInstance (canvas);
+        paintScreen.drawCanvas ( canvas,DrawingSymbol.CANVAS_HORIZONTAL_SYMBOL.getDrawingSymbol (),DrawingSymbol.CANVAS_VERTICAL_SYMBOL.getDrawingSymbol () );
+        DrawLine drawLine = new DrawLine ( line );
+        drawLine.execute ();
+        paintScreen.fillColor ( new BucketFill ( 3,2,'o' ) );
+        assertEquals ( 'o',paintScreen.getScreen ()[2][3] );
+    }
+
+    @Test
+    @DisplayName ( "Fill Color on the Rectangle" )
+    void fillColorOnRectangleTestSuccess() throws CommandException.InvalidCommandParamsException {
+        Canvas canvas = new Canvas ( "20 4" );
+        CreateCanvas createCanvas = new CreateCanvas ( canvas );
+        createCanvas.execute ();
+        paintScreen = PaintScreen.getInstance (canvas);
+        Rectangle rectangle = new Rectangle ( 14,1,18,3 );
+        DrawRectangle drawRectangle = new DrawRectangle ( rectangle );
+        drawRectangle.execute ();
+        BucketFill bucketFill = new BucketFill ( 16,2,'o' );
+        BucketFillCommand bucketFillCommand = new BucketFillCommand ( bucketFill );
+        bucketFillCommand.execute ();
+        assertEquals ( 'o',paintScreen.getScreen ()[2][15] );
     }
 }

@@ -81,13 +81,15 @@ Please Enter Paint Command:
 ```
 
 ##Code coverage
-We are following TDD approach for development.
+We are following TDD approach for development, Below screenshot help to understand the test coverage of code.
+  
+![plot](./resources/CodeCoverage.png)
 
 Test Case result of Surefire report:
 ```
 [INFO] Results:
 [INFO]
-[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0
 [INFO]
 ```
 Note: I wrote the Unit test cases for the required classes only.
