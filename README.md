@@ -30,7 +30,10 @@ The program will ask to enter appropriate allowed commands as below :
 * Lines can be drawn inside the Canvas only, so the co-ordinates which are mismatching to the canvas will result into provide error message.
 * Rectangle can be drawn inside the Canvas only, so the co-ordinates which are mismatching to the canvas will result into provide error message.
 * Bucket fill command will expect the x,y co-ordinates must be within the range of the Canvas only, so the co-ordinates which are mismatching to the canvas will result into provide error message.
-* Bucket fill will fill with the given color(character) inside the canvas. It will replace all ' ' char.
+* Bucket fill is same as the Paint's bucket fill functionality:
+* If the given point is on the earlier drawn line, then it will fill only that line.
+* If the given point is on the earlier drawn rectangle, then it will fill only that rectangle with the given color.
+* If the given point is on the canvas only, then it will fill the color apart from the line and rectangle.
 
 ## Technologies
 Project is created with:
